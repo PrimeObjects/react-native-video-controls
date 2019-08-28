@@ -997,7 +997,7 @@ export default class VideoPlayer extends Component {
                 <View
                     style={[
                         styles.seekbar.handle,
-                        { left: this.state.seekerPosition }
+                        { left: this.state.seekerPosition && !isNaN(this.state.seekerPosition)?this.state.seekerPosition:0 }
                     ]}
                     { ...this.player.seekPanResponder.panHandlers }
                 >
